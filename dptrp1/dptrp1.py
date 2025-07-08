@@ -768,6 +768,12 @@ class DigitalPaper:
             if delete_local:
                 folders_to_delete_local.append(foldername)
 
+
+        
+        # Vincent hat folgende 2 Zeilen hinzugefügt
+        folders_to_delete_local = []
+        folders_to_create_local = []
+        
         # If a folder structure is deleted, let's sort the deletion so that we always select the innermost, empty, folder first.
         folders_to_delete_remote.sort(reverse=True)
         folders_to_delete_local.sort(reverse=True)

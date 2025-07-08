@@ -914,10 +914,15 @@ class DigitalPaper:
 
         progress_bar.close()
 
-        print("Refreshing file information... ", end="", flush=True)
-        remote_info = self.traverse_folder(
-            remote_folder, fields=["entry_path", "modified_date", "entry_type"]
-        )
+
+        # Vincent hat folgende 4 Zeilen kommentiert
+        # print("Refreshing file information... ", end="", flush=True)
+        # remote_info = self.traverse_folder(
+        #     remote_folder, fields=["entry_path", "modified_date", "entry_type"]
+        # )
+
+
+        
         self.sync_checkpoint(local_folder, remote_info)
         print("done")
 

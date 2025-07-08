@@ -834,6 +834,12 @@ class DigitalPaper:
         )
 
         # Apply changes in remote to local
+
+        # Vincent hat die 2 folgenden Zeilen hinzugefuegt:
+        to_download = []
+        to_delete_local = []
+
+        
         for remote_path in to_download:
             relative_path = Path(remote_path).relative_to(remote_folder)
             local_path = Path(local_folder) / relative_path
